@@ -45,3 +45,15 @@ def template_handler(req, resp):
     resp.body = app.template(
         "index.html", context={"name": "Jenova", "title": "Best Framework"}
     ).encode()
+
+
+def custom_exception_handler(request, response, exception_cls):
+    response.text = str(exception_cls)
+
+
+app.add_exception_handler(custom_exception_handler)
+
+
+@app.route("/exception")
+def exception_throwing_handler(request, response):
+    raise AssertionError("This handler should not be used.")
