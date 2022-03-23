@@ -1,3 +1,4 @@
 # JENOVA
 
-A python web framework created base on the testdriven course [Build your own python web framework](https://testdriven.io/courses/python-web-framework).
+A python web framework, this is not meant to be used for anything serious, it's my
+playground to understand how to build a web from scratch (mostly).
