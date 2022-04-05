@@ -1,5 +1,8 @@
 # JENOVA
 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/Tobi-De/jenova/blob/master/LICENSE)
+[![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 The goal of this project is to understand the ins and outs of how a web framework works on a deeper level.
 I'm also using this project as a playground to try to build common components found in the web framework ecosystem 
 like forms, orm, etc. After building the core of the framework, I will try to implement from scratch (mostly) 
