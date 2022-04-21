@@ -18,6 +18,7 @@ In brackets are the potential open source packages to use once my own implementa
 - [ ] A Dependency injection system based on type hints ([di](https://github.com/adriangb/di/))
 - [ ] Orm and query builder ([pydantic](https://github.com/samuelcolvin/pydantic/) + [asyncpg](https://github.com/samuelcolvin/pydantic/) / [SQLModel](https://github.com/tiangolo/sqlmodel) / [orm](https://github.com/encode/orm))
 - [ ] A django-like form framework ([pydantic](https://github.com/samuelcolvin/pydantic/) / [typesystem](https://github.com/encode/typesystem) / [deform](https://github.com/Pylons/deform))
+- [ ] First class Integration with [edgedb](https://github.com/edgedb/edgedb)
 - [ ] Authentication with support for oauth2 (???)
 - [ ] Messages / notifications system (???)
 - [ ] Open Api generation  (???)
