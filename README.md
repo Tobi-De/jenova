@@ -26,4 +26,4 @@ In brackets are the potential open source packages to use once my own implementa
 - [ ] Media storage engine (???)
 - [ ] Email Management (???)
 - [ ] Websockets (???)
-- [ ] Django-like Management commands ([typer](https://github.com/tiangolo/typer))
+- [ ] Django-like Management commands ([typer](https://github.com/tiangolo/typer) + [rich](https://github.com/Textualize/rich))

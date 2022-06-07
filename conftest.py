@@ -1,6 +1,6 @@
 import pytest
 
-from .api import API
+from jenova.api import API
 
 
 @pytest.fixture
