@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Web framework built for learning purpose"
 authors = ["Tobi-De <tobidegnon@protonmail.com>"]
 packages = [
-  { include = "jenova", from = "src" },
+    { include = "jenova", from = "src" },
 ]
 
 [tool.poetry.dependencies]
@@ -18,18 +18,23 @@ Jinja2 = "^3.1.2"
 whitenoise = "^6.6.0"
 httpx = "^0.25.1"
 
-
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.6.1"
 pre-commit = "^3.5.0"
 pytest = "^7.4.3"
 pytest-cov = "^4.1.0"
 ipython = "^8.17.2"
-
+poethepoet = "^0.24.2"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^7.2.6"
 shibuya = "^2023.10.26"
+sphinx-autobuild = "^2021.3.14"
+sphinx-click = "^5.0.1"
+
+[tool.poe.tasks]
+serve-docs = "sphinx-autobuild docs docs/_build/html --port 8080"
+run-demo = "gunicorn demo.app:app"
 
 [tool.ruff]
 # Enable Pyflakes `E` and `F` codes by default.
@@ -61,7 +66,7 @@ exclude = [
     "static",
 ]
 
-per-file-ignores = {}
+per-file-ignores = { }
 
 # Same as Black.
 line-length = 120

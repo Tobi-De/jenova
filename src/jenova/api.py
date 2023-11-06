@@ -79,9 +79,8 @@ class API:
                     handler = getattr(handler(), request.method.lower(), None)
                     if handler is None:
                         raise AttributeError(f"Method {request.method} not allowed")
-                else:
-                    if request.method.lower() not in allowed_methods:
-                        raise AttributeError("Method not allowed", request.method)
+                elif request.method.lower() not in allowed_methods:
+                    raise AttributeError("Method not allowed", request.method)
                 handler(request, response, **kwargs)
             else:
                 self.default_response(response)
