@@ -1,7 +1,11 @@
 # JENOVA
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/Tobi-De/jenova/main/LICENSE)
-[![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![pypi](https://badge.fury.io/py/jenova.svg)](https://pypi.org/project/jenova/)
+[![Docs: Sphinx](https://img.shields.io/badge/sphinx-docs-blue.svg)](https://tobi-de.github.io/jenova)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Tobi-De/jenova/blob/main/LICENSE)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 
 > [!Note]
 > Learning experience, nothing serious
