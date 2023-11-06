@@ -1,7 +1,12 @@
+from pathlib import Path
+
 from jenova.api import API
 from jenova.middleware import Middleware
 
-app = API()
+BASE_DIR = Path(__file__).parent
+
+
+app = API(templates_dir=BASE_DIR / "templates", static_dir=BASE_DIR / "static")
 
 
 @app.route("/home")
@@ -73,7 +78,9 @@ app.add_middleware(SimpleCustomMiddleware)
 
 @app.route("/template")
 def template_handler(req, resp):
-    resp.html = app.template("index.html", context={"name": "Bumbo", "title": "Best Framework"})
+    resp.html = app.template(
+        "index.html", context={"name": "Bumbo", "title": "Best Framework"}
+    )
 
 
 @app.route("/json")

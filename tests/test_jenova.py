@@ -1,5 +1,4 @@
 import pytest
-
 from jenova.api import API
 from jenova.middleware import Middleware
 
@@ -10,6 +9,7 @@ FILE_CONTENTS = "body {background-color: red}"
 
 # helpers
 
+
 def _create_static(static_dir):
     asset = static_dir.mkdir(FILE_DIR).join(FILE_NAME)
     asset.write(FILE_CONTENTS)
@@ -18,6 +18,7 @@ def _create_static(static_dir):
 
 
 # tests
+
 
 def test_basic_route_adding(api):
     @api.route("/home")
@@ -31,6 +32,7 @@ def test_route_overlap_throws_exception(api):
         resp.text = "YOLO"
 
     with pytest.raises(AssertionError):
+
         @api.route("/home")
         def home2(req, resp):
             resp.text = "YOLO"
@@ -107,7 +109,9 @@ def test_alternative_route(api, client):
 def test_template(api, client):
     @api.route("/html")
     def html_handler(req, resp):
-        resp.body = api.template("index.html", context={"title": "Some Title", "name": "Some Name"}).encode()
+        resp.body = api.template(
+            "index.html", context={"title": "Some Title", "name": "Some Name"}
+        ).encode()
 
     response = client.get("http://testserver/html")
 
@@ -131,7 +135,7 @@ def test_custom_exception_handler(api, client):
 
 
 def test_404_is_returned_for_nonexistent_static_file(client):
-    assert client.get(f"http://testserver/static/main.css)").status_code == 404
+    assert client.get("http://testserver/static/main.css)").status_code == 404
 
 
 def test_assets_are_served(tmpdir_factory):
@@ -164,11 +168,11 @@ def test_middleware_methods_are_called(api, client):
 
     api.add_middleware(CallMiddlewareMethods)
 
-    @api.route('/')
+    @api.route("/")
     def index(req, res):
         res.text = "YOLO"
 
-    client.get('http://testserver/')
+    client.get("http://testserver/")
 
     assert process_request_called is True
     assert process_response_called is True

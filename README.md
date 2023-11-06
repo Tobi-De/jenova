@@ -22,7 +22,7 @@ In brackets are the potential open source packages to use once my own implementa
 - [ ] Authentication with support for oauth2 (???) -  https://datatracker.ietf.org/doc/html/rfc6749#section-4.1 - https://oauth.net/2/
 - [ ] Messages / notifications system (???)
 - [ ] Open Api generation  (???)
-- [ ] Server sent events (???) 
+- [ ] Server sent events (???)
 - [ ] Admin interface (???)
 - [ ] Media storage engine (???)
 - [ ] Email Management (???)

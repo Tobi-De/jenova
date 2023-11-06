@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 import inspect
-import os
+from pathlib import Path
 
-from httpx import Request
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment
+from jinja2 import FileSystemLoader
 from parse import parse
 from requests import session as RequestsSession
 from webob import Request
@@ -16,11 +16,11 @@ from .response import Response
 
 
 class API:
-    def __init__(self, templates_dir: str = "templates", static_dir: str = "static"):
+    def __init__(self, templates_dir: Path, static_dir: Path):
         self.routes = {}
 
         self.templates_env = Environment(
-            loader=FileSystemLoader(os.path.abspath(templates_dir))
+            loader=FileSystemLoader(templates_dir.resolve())
         )
 
         self.exception_handler = None
@@ -32,7 +32,7 @@ class API:
     def __call__(self, environ: dict, start_response: callable) -> Response:
         path_info = environ["PATH_INFO"]
         if path_info.startswith("/static"):
-            environ["PATH_INFO"] = path_info[len("/static"):]
+            environ["PATH_INFO"] = path_info[len("/static") :]
             return self.whitenoise(environ, start_response)
         return self.middleware(environ, start_response)
 
@@ -54,7 +54,7 @@ class API:
         return wrapper
 
     def add_route(
-            self, path: str, handler: callable, allowed_methods: list[str] | None = None
+        self, path: str, handler: callable, allowed_methods: list[str] | None = None
     ) -> None:
         assert path not in self.routes, "Such route already exists."
 
