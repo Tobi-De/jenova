@@ -18,7 +18,7 @@ In brackets are the potential open source packages to use once my own implementa
 
 - [ ] The core of the framework, built around the WSGI standard
 - [ ] Implement the ASGI standard, mixing and matching sync and async views should be possible
-- [ ] A Dependency injection system based on type hints ([di](https://github.com/adriangb/di/))
+- [ ] A Dependency injection system based on type hints ([di](https://github.com/adriangb/di/) / [punq](https://github.com/bobthemighty/punq))
 - [ ] Orm and query builder ([orm](https://github.com/encode/orm))
 - [ ] Postgres Database driver ([asyncpg](https://magicstack.github.io/asyncpg/current/))
 - [ ] A django-like form framework ([msgspec](https://github.com/jcrist/msgspec) / [typesystem](https://github.com/encode/typesystem) / [deform](https://github.com/Pylons/deform))
