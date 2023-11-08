@@ -19,10 +19,10 @@ In brackets are the potential open source packages to use once my own implementa
 - [ ] The core of the framework, built around the WSGI standard
 - [ ] Implement the ASGI standard, mixing and matching sync and async views should be possible
 - [ ] A Dependency injection system based on type hints ([di](https://github.com/adriangb/di/))
-- [ ] Orm and query builder ([pydantic](https://github.com/samuelcolvin/pydantic/) + [asyncpg](https://github.com/samuelcolvin/pydantic/) / [SQLModel](https://github.com/tiangolo/sqlmodel) / [orm](https://github.com/encode/orm))
-- [ ] Postgres Database driver
-- [ ] A django-like form framework ([pydantic](https://github.com/samuelcolvin/pydantic/) / [typesystem](https://github.com/encode/typesystem) / [deform](https://github.com/Pylons/deform))
-- [ ] First class Integration with [edgedb](https://github.com/edgedb/edgedb)
+- [ ] Orm and query builder ([orm](https://github.com/encode/orm))
+- [ ] Postgres Database driver ([asyncpg](https://magicstack.github.io/asyncpg/current/))
+- [ ] A django-like form framework ([msgspec](https://github.com/jcrist/msgspec) / [typesystem](https://github.com/encode/typesystem) / [deform](https://github.com/Pylons/deform))
+- [ ] Database adapter for [edgedb](https://github.com/edgedb/edgedb) ?
 - [ ] Authentication with support for oauth2 (???) -  https://datatracker.ietf.org/doc/html/rfc6749#section-4.1 - https://oauth.net/2/
 - [ ] Messages / notifications system (???)
 - [ ] Open Api generation  (???)
@@ -34,7 +34,7 @@ In brackets are the potential open source packages to use once my own implementa
 - [ ] Templating language, with htmx support
 - [ ] Django-like Management commands ([typer](https://github.com/tiangolo/typer) + [rich](https://github.com/Textualize/rich))
 - [ ] Settings management ([pydantic](https://github.com/samuelcolvin/pydantic/) / [hydra](https://github.com/facebookresearch/hydra))
-- [ ] A web server (something wih goroutines ???)
+- [ ] A custom web server (something wih goroutines ???)
 
 ## Misc
 
