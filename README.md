@@ -32,7 +32,7 @@ In brackets are the potential open source packages to use once my own implementa
 - [ ] Email Management (???)
 - [ ] Websockets (???)
 - [ ] Templating language, with htmx support
-- [ ] Django-like Management commands ([typer](https://github.com/tiangolo/typer) + [rich](https://github.com/Textualize/rich))
+- [ ] Django-like Management commands ([typer](https://github.com/tiangolo/typer) + [rich](https://github.com/Textualize/rich) / [cappa](https://github.com/DanCardin/cappa))
 - [ ] Settings management ([pydantic](https://github.com/samuelcolvin/pydantic/) / [hydra](https://github.com/facebookresearch/hydra))
 - [ ] A custom web server (something wih goroutines ???)
 
